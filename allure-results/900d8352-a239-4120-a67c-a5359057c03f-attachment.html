@@ -1,0 +1,327 @@
+<div>Status code 200 </div>
+
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;resourceType&quot;: &quot;Bundle&quot;,
+    &quot;id&quot;: &quot;84f69d63-e57d-4976-ba0e-60eb10b4a5da&quot;,
+    &quot;meta&quot;: {
+        &quot;lastUpdated&quot;: &quot;2022-09-16T05:57:20.295+00:00&quot;
+    },
+    &quot;type&quot;: &quot;searchset&quot;,
+    &quot;link&quot;: [
+        {
+            &quot;relation&quot;: &quot;self&quot;,
+            &quot;url&quot;: &quot;https://test-fhirapi.development.arcadiaanalytics.com/fhir/ServiceRequest?code=E1122&amp;patient=cradmo6.59662&amp;_pageId=e2f74922-702f-4501-a6e9-4d01d5f1f80a&amp;_count=5&quot;
+        },
+        {
+            &quot;relation&quot;: &quot;next&quot;,
+            &quot;url&quot;: &quot;https://test-fhirapi.development.arcadiaanalytics.com/fhir/ServiceRequest?code=E1122&amp;patient=cradmo6.59662&amp;_pageId=050c235a-1396-4e65-b8b1-658772ee0812&amp;_count=5&quot;
+        }
+    ],
+    &quot;entry&quot;: [
+        {
+            &quot;resource&quot;: {
+                &quot;resourceType&quot;: &quot;ServiceRequest&quot;,
+                &quot;id&quot;: &quot;cradmo6.59662|184|0633004C-1898-4B7B-BD56-158B825A49AE&quot;,
+                &quot;meta&quot;: {
+                    &quot;lastUpdated&quot;: &quot;2021-06-25T08:04:11.000+00:00&quot;,
+                    &quot;profile&quot;: [
+                        &quot;http://hl7.org/fhir/StructureDefinition/ServiceRequest&quot;
+                    ]
+                },
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;intent&quot;: &quot;order&quot;,
+                &quot;category&quot;: [
+                    {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,
+                                &quot;code&quot;: &quot;108252007&quot;,
+                                &quot;display&quot;: &quot;Laboratory procedure&quot;
+                            }
+                        ]
+                    }
+                ],
+                &quot;code&quot;: {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;system&quot;: &quot;http://www.snomed.org/&quot;,
+                            &quot;code&quot;: &quot;E1122&quot;
+                        },
+                        {
+                            &quot;system&quot;: &quot;http://loinc.org&quot;,
+                            &quot;code&quot;: &quot;2951-2&quot;
+                        }
+                    ]
+                },
+                &quot;subject&quot;: {
+                    &quot;reference&quot;: &quot;Patient/cradmo6.59662&quot;,
+                    &quot;type&quot;: &quot;Patient&quot;
+                },
+                &quot;encounter&quot;: {
+                    &quot;reference&quot;: &quot;Encounter/cradmo6.59662|184|93C32B8C-42DB-4D8E-BBCD-581A5E14C791&quot;,
+                    &quot;type&quot;: &quot;Encounter&quot;
+                },
+                &quot;authoredOn&quot;: &quot;2021-07-31T00:00:00+00:00&quot;,
+                &quot;performer&quot;: [
+                    {
+                        &quot;reference&quot;: &quot;Practitioner/184|76296FD9-F217-407F-A6EB-96B3028F15EC&quot;,
+                        &quot;type&quot;: &quot;Practitioner&quot;
+                    }
+                ],
+                &quot;note&quot;: [
+                    {
+                        &quot;text&quot;: &quot;&lt;PHI REDACTED&gt;&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;resource&quot;: {
+                &quot;resourceType&quot;: &quot;ServiceRequest&quot;,
+                &quot;id&quot;: &quot;cradmo6.59662|184|11824619-8E79-4FF9-A6CF-34A4C783514B&quot;,
+                &quot;meta&quot;: {
+                    &quot;lastUpdated&quot;: &quot;2021-06-25T08:04:11.000+00:00&quot;,
+                    &quot;profile&quot;: [
+                        &quot;http://hl7.org/fhir/StructureDefinition/ServiceRequest&quot;
+                    ]
+                },
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;intent&quot;: &quot;order&quot;,
+                &quot;category&quot;: [
+                    {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,
+                                &quot;code&quot;: &quot;108252007&quot;,
+                                &quot;display&quot;: &quot;Laboratory procedure&quot;
+                            }
+                        ]
+                    }
+                ],
+                &quot;code&quot;: {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;system&quot;: &quot;http://www.snomed.org/&quot;,
+                            &quot;code&quot;: &quot;E1122&quot;
+                        },
+                        {
+                            &quot;system&quot;: &quot;http://loinc.org&quot;,
+                            &quot;code&quot;: &quot;2028-9&quot;
+                        }
+                    ]
+                },
+                &quot;subject&quot;: {
+                    &quot;reference&quot;: &quot;Patient/cradmo6.59662&quot;,
+                    &quot;type&quot;: &quot;Patient&quot;
+                },
+                &quot;encounter&quot;: {
+                    &quot;reference&quot;: &quot;Encounter/cradmo6.59662|184|93C32B8C-42DB-4D8E-BBCD-581A5E14C791&quot;,
+                    &quot;type&quot;: &quot;Encounter&quot;
+                },
+                &quot;authoredOn&quot;: &quot;2021-07-31T00:00:00+00:00&quot;,
+                &quot;performer&quot;: [
+                    {
+                        &quot;reference&quot;: &quot;Practitioner/184|76296FD9-F217-407F-A6EB-96B3028F15EC&quot;,
+                        &quot;type&quot;: &quot;Practitioner&quot;
+                    }
+                ],
+                &quot;note&quot;: [
+                    {
+                        &quot;text&quot;: &quot;&lt;PHI REDACTED&gt;&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;resource&quot;: {
+                &quot;resourceType&quot;: &quot;ServiceRequest&quot;,
+                &quot;id&quot;: &quot;cradmo6.59662|184|35D728A6-276F-49C9-96A3-A60D8FA60F79&quot;,
+                &quot;meta&quot;: {
+                    &quot;lastUpdated&quot;: &quot;2021-06-25T08:04:11.000+00:00&quot;,
+                    &quot;profile&quot;: [
+                        &quot;http://hl7.org/fhir/StructureDefinition/ServiceRequest&quot;
+                    ]
+                },
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;intent&quot;: &quot;order&quot;,
+                &quot;category&quot;: [
+                    {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,
+                                &quot;code&quot;: &quot;108252007&quot;,
+                                &quot;display&quot;: &quot;Laboratory procedure&quot;
+                            }
+                        ]
+                    }
+                ],
+                &quot;code&quot;: {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;system&quot;: &quot;http://www.snomed.org/&quot;,
+                            &quot;code&quot;: &quot;E1122&quot;
+                        },
+                        {
+                            &quot;system&quot;: &quot;http://loinc.org&quot;,
+                            &quot;code&quot;: &quot;33914-3&quot;
+                        }
+                    ]
+                },
+                &quot;subject&quot;: {
+                    &quot;reference&quot;: &quot;Patient/cradmo6.59662&quot;,
+                    &quot;type&quot;: &quot;Patient&quot;
+                },
+                &quot;encounter&quot;: {
+                    &quot;reference&quot;: &quot;Encounter/cradmo6.59662|184|93C32B8C-42DB-4D8E-BBCD-581A5E14C791&quot;,
+                    &quot;type&quot;: &quot;Encounter&quot;
+                },
+                &quot;authoredOn&quot;: &quot;2021-07-31T00:00:00+00:00&quot;,
+                &quot;performer&quot;: [
+                    {
+                        &quot;reference&quot;: &quot;Practitioner/184|76296FD9-F217-407F-A6EB-96B3028F15EC&quot;,
+                        &quot;type&quot;: &quot;Practitioner&quot;
+                    }
+                ],
+                &quot;note&quot;: [
+                    {
+                        &quot;text&quot;: &quot;&lt;PHI REDACTED&gt;&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;resource&quot;: {
+                &quot;resourceType&quot;: &quot;ServiceRequest&quot;,
+                &quot;id&quot;: &quot;cradmo6.59662|184|3B713D95-1617-4512-9415-D43D64673879&quot;,
+                &quot;meta&quot;: {
+                    &quot;lastUpdated&quot;: &quot;2021-06-25T08:04:11.000+00:00&quot;,
+                    &quot;profile&quot;: [
+                        &quot;http://hl7.org/fhir/StructureDefinition/ServiceRequest&quot;
+                    ]
+                },
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;intent&quot;: &quot;order&quot;,
+                &quot;category&quot;: [
+                    {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,
+                                &quot;code&quot;: &quot;108252007&quot;,
+                                &quot;display&quot;: &quot;Laboratory procedure&quot;
+                            }
+                        ]
+                    }
+                ],
+                &quot;code&quot;: {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;system&quot;: &quot;http://www.snomed.org/&quot;,
+                            &quot;code&quot;: &quot;E1122&quot;
+                        },
+                        {
+                            &quot;system&quot;: &quot;http://loinc.org&quot;,
+                            &quot;code&quot;: &quot;3097-3&quot;
+                        }
+                    ]
+                },
+                &quot;subject&quot;: {
+                    &quot;reference&quot;: &quot;Patient/cradmo6.59662&quot;,
+                    &quot;type&quot;: &quot;Patient&quot;
+                },
+                &quot;encounter&quot;: {
+                    &quot;reference&quot;: &quot;Encounter/cradmo6.59662|184|93C32B8C-42DB-4D8E-BBCD-581A5E14C791&quot;,
+                    &quot;type&quot;: &quot;Encounter&quot;
+                },
+                &quot;authoredOn&quot;: &quot;2021-07-31T00:00:00+00:00&quot;,
+                &quot;performer&quot;: [
+                    {
+                        &quot;reference&quot;: &quot;Practitioner/184|76296FD9-F217-407F-A6EB-96B3028F15EC&quot;,
+                        &quot;type&quot;: &quot;Practitioner&quot;
+                    }
+                ],
+                &quot;note&quot;: [
+                    {
+                        &quot;text&quot;: &quot;&lt;PHI REDACTED&gt;&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;resource&quot;: {
+                &quot;resourceType&quot;: &quot;ServiceRequest&quot;,
+                &quot;id&quot;: &quot;cradmo6.59662|184|42282F22-469F-4C16-BEF7-EE3CD903BDE5&quot;,
+                &quot;meta&quot;: {
+                    &quot;lastUpdated&quot;: &quot;2021-06-25T08:04:11.000+00:00&quot;,
+                    &quot;profile&quot;: [
+                        &quot;http://hl7.org/fhir/StructureDefinition/ServiceRequest&quot;
+                    ]
+                },
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;intent&quot;: &quot;order&quot;,
+                &quot;category&quot;: [
+                    {
+                        &quot;coding&quot;: [
+                            {
+                                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,
+                                &quot;code&quot;: &quot;108252007&quot;,
+                                &quot;display&quot;: &quot;Laboratory procedure&quot;
+                            }
+                        ]
+                    }
+                ],
+                &quot;code&quot;: {
+                    &quot;coding&quot;: [
+                        {
+                            &quot;system&quot;: &quot;http://www.snomed.org/&quot;,
+                            &quot;code&quot;: &quot;E1122&quot;
+                        },
+                        {
+                            &quot;system&quot;: &quot;http://loinc.org&quot;,
+                            &quot;code&quot;: &quot;2160-0&quot;
+                        }
+                    ]
+                },
+                &quot;subject&quot;: {
+                    &quot;reference&quot;: &quot;Patient/cradmo6.59662&quot;,
+                    &quot;type&quot;: &quot;Patient&quot;
+                },
+                &quot;encounter&quot;: {
+                    &quot;reference&quot;: &quot;Encounter/cradmo6.59662|184|93C32B8C-42DB-4D8E-BBCD-581A5E14C791&quot;,
+                    &quot;type&quot;: &quot;Encounter&quot;
+                },
+                &quot;authoredOn&quot;: &quot;2021-07-31T00:00:00+00:00&quot;,
+                &quot;performer&quot;: [
+                    {
+                        &quot;reference&quot;: &quot;Practitioner/184|76296FD9-F217-407F-A6EB-96B3028F15EC&quot;,
+                        &quot;type&quot;: &quot;Practitioner&quot;
+                    }
+                ],
+                &quot;note&quot;: [
+                    {
+                        &quot;text&quot;: &quot;&lt;PHI REDACTED&gt;&quot;
+                    }
+                ]
+            }
+        }
+    ]
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Transfer-Encoding: chunked</div>
+        <div>X-Request-ID: vPE56KS9syNaoTOG</div>
+        <div>Connection: keep-alive</div>
+        <div>Content-Encoding: gzip</div>
+        <div>Vary: Access-Control-Request-Headers</div>
+        <div>Last-Modified: Fri, 16 Sep 2022 05:57:20 GMT</div>
+        <div>Date: Fri, 16 Sep 2022 05:57:20 GMT</div>
+        <div>Content-Type: application/fhir+json;charset=UTF-8</div>
+        <div>X-Powered-By: HAPI FHIR 4.2.0 REST Server (FHIR Server; FHIR 4.0.1/R4)</div>
+</div>
+
+

@@ -1,0 +1,181 @@
+package prac1.com;
+
+import java.util.HashMap;
+import org.testng.annotations.Test;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.restassured.response.Response;
+
+public class Observation {
+
+	public static Response response;
+	 
+@Test(priority=1)
+@Description("Validation of status code and category as a filtering parameter")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case1() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59662");
+		QuerryParams.put("category", "laboratory");
+		
+	           response = Common_Method.get(QuerryParams, Route.Observation);
+	                             
+     /*     Assert.assertEquals(response.path("entry[0].resource.resourceType"), "AllergyIntolerance");
+	    	Assert.assertEquals(response.path("entry[0].resource.id"), "cradmo6.59662|58|0A87602C-061A-4335-AA51-15C6AAE60D6B");
+	    	Assert.assertEquals(response.path("entry[0].resource.meta.lastUpdated"), "2021-06-25T08:04:11.000+00:00");
+	    	Assert.assertEquals(response.path("entry[0].resource.category[0]"), "medication");
+	    	Assert.assertEquals(response.path("entry[0].resource.code.text"), "levofloxacin");
+	    	Assert.assertEquals(response.path("entry[0].resource.patient.reference"), "Patient/cradmo6.59662");
+	    	Assert.assertEquals(response.path("entry[0].resource.onsetDateTime"), "2021-01-01T00:00:00+00:00");
+	    	Assert.assertEquals(response.path("entry[0].resource.clinicalStatus.coding[0].code"), "active");       */
+}
+
+@Test(priority=2)
+@Description("Validation of status code and category as a filtering parameter")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case2() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59662");
+		QuerryParams.put("category", "vital-signs");		
+		
+	           response = Common_Method.get(QuerryParams, Route.Observation);
+}
+
+@Test(priority=3)
+@Description("Validation of status code and code as a filtering parameter")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case3() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59662");
+		QuerryParams.put("code", "8302-2");
+		
+	           response = Common_Method.get(QuerryParams, Route.Observation);
+}
+
+@Test(priority=4)
+@Description("Validation of status code and category, date are filtering parameters")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case4() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59662");
+		QuerryParams.put("category", "vital-signs");
+		QuerryParams.put("date", "ge2022-07-14");
+		
+	           response = Common_Method.get(QuerryParams, Route.Observation);
+}
+
+@Test(priority=5)
+@Description("Validation of status code, category and status are as filtering parameters")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case5() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59662");
+		QuerryParams.put("category", "vital-signs");
+		QuerryParams.put("status", "final");
+		
+	           response = Common_Method.get(QuerryParams, Route.Observation);
+}
+
+@Test(priority=6)
+@Description("Validation of status code, code and date are as filtering parameters")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case6() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59662");
+		QuerryParams.put("code", "http://loinc.org%78462-4");
+		QuerryParams.put("date", "ge2016-09-30");
+		
+	           response = Common_Method.get(QuerryParams, Route.Observation);
+}
+
+@Test(priority=7)
+@Description("Validation of status code without valid Parameters")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case7() {
+		
+	HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+	QuerryParams.put("null", "null");
+	
+	           response = Common_Method.get_for_null(QuerryParams, Route.Observation);	        		   
+}
+
+@Test(priority=8)
+@Description("Validation of status code with invalid parameters")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case8() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59663");
+		
+	           response = Common_Method.get(QuerryParams, Route.Observation);
+}
+
+@Test(priority=9)
+@Description("Validation of status code with invalid headers/path")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case9() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59662");
+		
+	           response = Common_Method.get_for_invalid(QuerryParams, Route.invalidpath);
+ }
+
+@Test(priority=10)
+@Description("Validation of status code with different code as a parameter")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case10() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59662");
+		QuerryParams.put("code", "706-2");
+		
+	           response = Common_Method.get(QuerryParams, Route.Observation);
+}
+
+@Test(priority=11)
+@Description("Validation of status code with category and different date as a parameter")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case11() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59662");
+		QuerryParams.put("category", "vital-signs");
+		QuerryParams.put("date", "ge2000-07-14");
+		
+	           response = Common_Method.get(QuerryParams, Route.Observation);
+}
+
+@Test(priority=12)
+@Description("Validation of status code with category and invalid date format")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case12() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59662");
+		QuerryParams.put("category", "vital-signs");
+		QuerryParams.put("date", "ge14-07-2000");
+		
+	           response = Common_Method.get_for_null(QuerryParams, Route.Observation);
+}
+
+@Test(priority=13)
+@Description("Validation of status code with category and different status")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case13() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("patient", "cradmo6.59662");
+		QuerryParams.put("category", "vital-signs");
+		QuerryParams.put("status", "registered");
+		
+	           response = Common_Method.get(QuerryParams, Route.Observation);
+ }
+}

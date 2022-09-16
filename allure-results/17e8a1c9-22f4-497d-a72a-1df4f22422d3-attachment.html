@@ -1,0 +1,771 @@
+<div>Status code 200 </div>
+
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;resourceType&quot;: &quot;Bundle&quot;,
+    &quot;id&quot;: &quot;f8e29c24-5d9b-4571-b385-192c2dadaa22&quot;,
+    &quot;meta&quot;: {
+        &quot;lastUpdated&quot;: &quot;2022-09-16T05:55:07.482+00:00&quot;
+    },
+    &quot;type&quot;: &quot;searchset&quot;,
+    &quot;link&quot;: [
+        {
+            &quot;relation&quot;: &quot;self&quot;,
+            &quot;url&quot;: &quot;https://test-fhirapi.development.arcadiaanalytics.com/fhir/Patient?name=Peggy%2CThomas&quot;
+        },
+        {
+            &quot;relation&quot;: &quot;next&quot;,
+            &quot;url&quot;: &quot;https://test-fhirapi.development.arcadiaanalytics.com/fhir/Patient?name=Peggy%2CThomas&amp;_pageNo=2&amp;_count=5&quot;
+        }
+    ],
+    &quot;entry&quot;: [
+        {
+            &quot;resource&quot;: {
+                &quot;resourceType&quot;: &quot;Patient&quot;,
+                &quot;id&quot;: &quot;cradmo6.59662&quot;,
+                &quot;meta&quot;: {
+                    &quot;lastUpdated&quot;: &quot;2021-06-25T08:04:11.000+00:00&quot;,
+                    &quot;profile&quot;: [
+                        &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient&quot;
+                    ]
+                },
+                &quot;extension&quot;: [
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-race&quot;,
+                        &quot;extension&quot;: [
+                            {
+                                &quot;url&quot;: &quot;ombCategory&quot;,
+                                &quot;valueCoding&quot;: {
+                                    &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.238&quot;,
+                                    &quot;code&quot;: &quot;2106-3&quot;,
+                                    &quot;display&quot;: &quot;White&quot;
+                                }
+                            },
+                            {
+                                &quot;url&quot;: &quot;text&quot;,
+                                &quot;valueString&quot;: &quot;White&quot;
+                            }
+                        ]
+                    },
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity&quot;,
+                        &quot;extension&quot;: [
+                            {
+                                &quot;url&quot;: &quot;ombCategory&quot;,
+                                &quot;valueCoding&quot;: {
+                                    &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.238&quot;,
+                                    &quot;code&quot;: &quot;2186-5&quot;,
+                                    &quot;display&quot;: &quot;Not Hispanic or Latino&quot;
+                                }
+                            },
+                            {
+                                &quot;url&quot;: &quot;text&quot;,
+                                &quot;valueString&quot;: &quot;Not Hispanic or Latino&quot;
+                            }
+                        ]
+                    },
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex&quot;,
+                        &quot;valueCode&quot;: &quot;F&quot;
+                    }
+                ],
+                &quot;identifier&quot;: [
+                    {
+                        &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.4.317&quot;,
+                        &quot;value&quot;: &quot;127|C29993D8-5CB4-4D0C-94AF-878BB2D85BF4&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;MR&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.4.317&quot;,
+                        &quot;value&quot;: &quot;61277941&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;SS&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/sid/us-ssn&quot;,
+                        &quot;value&quot;: &quot;440002000&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;MB&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;http://member.code.system&quot;,
+                        &quot;value&quot;: &quot;865111-43&quot;
+                    }
+                ],
+                &quot;active&quot;: true,
+                &quot;name&quot;: [
+                    {
+                        &quot;family&quot;: &quot;Thomas&quot;,
+                        &quot;given&quot;: [
+                            &quot;Peggy&quot;
+                        ]
+                    }
+                ],
+                &quot;telecom&quot;: [
+                    {
+                        &quot;system&quot;: &quot;phone&quot;,
+                        &quot;value&quot;: &quot;449-555-0190&quot;,
+                        &quot;use&quot;: &quot;mobile&quot;
+                    },
+                    {
+                        &quot;system&quot;: &quot;email&quot;,
+                        &quot;value&quot;: &quot;Peggy.Thomas@email.com&quot;
+                    }
+                ],
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;birthDate&quot;: &quot;1952-04-08&quot;,
+                &quot;address&quot;: [
+                    {
+                        &quot;type&quot;: &quot;physical&quot;,
+                        &quot;line&quot;: [
+                            &quot;144 WEST 17 STREET&quot;
+                        ],
+                        &quot;city&quot;: &quot;New York&quot;,
+                        &quot;state&quot;: &quot;NY&quot;,
+                        &quot;postalCode&quot;: &quot;10011&quot;
+                    }
+                ],
+                &quot;communication&quot;: [
+                    {
+                        &quot;language&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;urn:ietf:bcp:47&quot;,
+                                    &quot;code&quot;: &quot;en&quot;,
+                                    &quot;display&quot;: &quot;English&quot;
+                                }
+                            ]
+                        }
+                    }
+                ],
+                &quot;generalPractitioner&quot;: [
+                    {
+                        &quot;reference&quot;: &quot;Practitioner/127|AF669825-35A6-4518-982B-9987E35D1F29&quot;,
+                        &quot;type&quot;: &quot;Practitioner&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;resource&quot;: {
+                &quot;resourceType&quot;: &quot;Patient&quot;,
+                &quot;id&quot;: &quot;cradmo6.203576&quot;,
+                &quot;meta&quot;: {
+                    &quot;lastUpdated&quot;: &quot;2021-06-25T08:04:11.000+00:00&quot;,
+                    &quot;profile&quot;: [
+                        &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient&quot;
+                    ]
+                },
+                &quot;extension&quot;: [
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-race&quot;,
+                        &quot;extension&quot;: [
+                            {
+                                &quot;url&quot;: &quot;ombCategory&quot;,
+                                &quot;valueCoding&quot;: {
+                                    &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.238&quot;,
+                                    &quot;code&quot;: &quot;2106-3&quot;,
+                                    &quot;display&quot;: &quot;White&quot;
+                                }
+                            },
+                            {
+                                &quot;url&quot;: &quot;text&quot;,
+                                &quot;valueString&quot;: &quot;White&quot;
+                            }
+                        ]
+                    },
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity&quot;,
+                        &quot;extension&quot;: [
+                            {
+                                &quot;url&quot;: &quot;ombCategory&quot;,
+                                &quot;valueCoding&quot;: {
+                                    &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.238&quot;,
+                                    &quot;code&quot;: &quot;2186-5&quot;,
+                                    &quot;display&quot;: &quot;Not Hispanic or Latino&quot;
+                                }
+                            },
+                            {
+                                &quot;url&quot;: &quot;text&quot;,
+                                &quot;valueString&quot;: &quot;Not Hispanic or Latino&quot;
+                            }
+                        ]
+                    },
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex&quot;,
+                        &quot;valueCode&quot;: &quot;F&quot;
+                    }
+                ],
+                &quot;identifier&quot;: [
+                    {
+                        &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.4.317&quot;,
+                        &quot;value&quot;: &quot;127|7EA6BFA6-8807-41EF-9718-46644FD907F7&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;MR&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.4.317&quot;,
+                        &quot;value&quot;: &quot;91330984&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;SS&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/sid/us-ssn&quot;,
+                        &quot;value&quot;: &quot;252000112&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;MB&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;http://member.code.system&quot;,
+                        &quot;value&quot;: &quot;259703-90&quot;
+                    }
+                ],
+                &quot;active&quot;: true,
+                &quot;name&quot;: [
+                    {
+                        &quot;family&quot;: &quot;Thomas&quot;,
+                        &quot;given&quot;: [
+                            &quot;Peggy&quot;
+                        ]
+                    }
+                ],
+                &quot;telecom&quot;: [
+                    {
+                        &quot;system&quot;: &quot;phone&quot;,
+                        &quot;value&quot;: &quot;229-555-0149&quot;,
+                        &quot;use&quot;: &quot;mobile&quot;
+                    },
+                    {
+                        &quot;system&quot;: &quot;email&quot;,
+                        &quot;value&quot;: &quot;Peggy.Thomas@email.com&quot;
+                    }
+                ],
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;birthDate&quot;: &quot;1977-04-10&quot;,
+                &quot;address&quot;: [
+                    {
+                        &quot;type&quot;: &quot;physical&quot;,
+                        &quot;line&quot;: [
+                            &quot;2055 EAST 71 STREET&quot;
+                        ],
+                        &quot;city&quot;: &quot;New York&quot;,
+                        &quot;state&quot;: &quot;NY&quot;,
+                        &quot;postalCode&quot;: &quot;11234&quot;
+                    }
+                ],
+                &quot;communication&quot;: [
+                    {
+                        &quot;language&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;urn:ietf:bcp:47&quot;,
+                                    &quot;code&quot;: &quot;en&quot;,
+                                    &quot;display&quot;: &quot;English&quot;
+                                }
+                            ]
+                        }
+                    }
+                ],
+                &quot;generalPractitioner&quot;: [
+                    {
+                        &quot;reference&quot;: &quot;Practitioner/127|A2C2D2E9-E79F-4F36-B2DD-D5A00D4ACAAF&quot;,
+                        &quot;type&quot;: &quot;Practitioner&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;resource&quot;: {
+                &quot;resourceType&quot;: &quot;Patient&quot;,
+                &quot;id&quot;: &quot;cradmo6.253565&quot;,
+                &quot;meta&quot;: {
+                    &quot;lastUpdated&quot;: &quot;2021-06-25T08:04:11.000+00:00&quot;,
+                    &quot;profile&quot;: [
+                        &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient&quot;
+                    ]
+                },
+                &quot;extension&quot;: [
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-race&quot;,
+                        &quot;extension&quot;: [
+                            {
+                                &quot;url&quot;: &quot;ombCategory&quot;,
+                                &quot;valueCoding&quot;: {
+                                    &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.238&quot;,
+                                    &quot;code&quot;: &quot;2106-3&quot;,
+                                    &quot;display&quot;: &quot;White&quot;
+                                }
+                            },
+                            {
+                                &quot;url&quot;: &quot;text&quot;,
+                                &quot;valueString&quot;: &quot;White&quot;
+                            }
+                        ]
+                    },
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity&quot;,
+                        &quot;extension&quot;: [
+                            {
+                                &quot;url&quot;: &quot;ombCategory&quot;,
+                                &quot;valueCoding&quot;: {
+                                    &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.238&quot;,
+                                    &quot;code&quot;: &quot;2186-5&quot;,
+                                    &quot;display&quot;: &quot;Not Hispanic or Latino&quot;
+                                }
+                            },
+                            {
+                                &quot;url&quot;: &quot;text&quot;,
+                                &quot;valueString&quot;: &quot;Not Hispanic or Latino&quot;
+                            }
+                        ]
+                    },
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex&quot;,
+                        &quot;valueCode&quot;: &quot;M&quot;
+                    }
+                ],
+                &quot;identifier&quot;: [
+                    {
+                        &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.4.317&quot;,
+                        &quot;value&quot;: &quot;184|D294D4B1-C764-4C8A-893E-6FB968C7F056&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;MR&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.4.317&quot;,
+                        &quot;value&quot;: &quot;51385284&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;SS&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/sid/us-ssn&quot;,
+                        &quot;value&quot;: &quot;822007450&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;MB&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;http://member.code.system&quot;,
+                        &quot;value&quot;: &quot;816034-60&quot;
+                    }
+                ],
+                &quot;name&quot;: [
+                    {
+                        &quot;family&quot;: &quot;Thomas&quot;,
+                        &quot;given&quot;: [
+                            &quot;Thomas&quot;
+                        ]
+                    }
+                ],
+                &quot;telecom&quot;: [
+                    {
+                        &quot;system&quot;: &quot;phone&quot;,
+                        &quot;value&quot;: &quot;510-555-0118&quot;,
+                        &quot;use&quot;: &quot;mobile&quot;
+                    },
+                    {
+                        &quot;system&quot;: &quot;email&quot;,
+                        &quot;value&quot;: &quot;Thomas.Thomas@email.com&quot;
+                    }
+                ],
+                &quot;gender&quot;: &quot;male&quot;,
+                &quot;birthDate&quot;: &quot;1937-07-08&quot;,
+                &quot;address&quot;: [
+                    {
+                        &quot;type&quot;: &quot;physical&quot;,
+                        &quot;line&quot;: [
+                            &quot;7215 AVENUE V&quot;
+                        ],
+                        &quot;city&quot;: &quot;New York&quot;,
+                        &quot;state&quot;: &quot;NY&quot;,
+                        &quot;postalCode&quot;: &quot;11234&quot;
+                    }
+                ],
+                &quot;communication&quot;: [
+                    {
+                        &quot;language&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;urn:ietf:bcp:47&quot;,
+                                    &quot;code&quot;: &quot;en&quot;,
+                                    &quot;display&quot;: &quot;English&quot;
+                                }
+                            ]
+                        }
+                    }
+                ],
+                &quot;generalPractitioner&quot;: [
+                    {
+                        &quot;reference&quot;: &quot;Practitioner/184|7EFB511E-ABB1-4E27-8916-4FB13B805D22&quot;,
+                        &quot;type&quot;: &quot;Practitioner&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;resource&quot;: {
+                &quot;resourceType&quot;: &quot;Patient&quot;,
+                &quot;id&quot;: &quot;cradmo6.132935&quot;,
+                &quot;meta&quot;: {
+                    &quot;lastUpdated&quot;: &quot;2021-06-25T08:04:11.000+00:00&quot;,
+                    &quot;profile&quot;: [
+                        &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient&quot;
+                    ]
+                },
+                &quot;extension&quot;: [
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-race&quot;,
+                        &quot;extension&quot;: [
+                            {
+                                &quot;url&quot;: &quot;ombCategory&quot;,
+                                &quot;valueCoding&quot;: {
+                                    &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.238&quot;,
+                                    &quot;code&quot;: &quot;2106-3&quot;,
+                                    &quot;display&quot;: &quot;White&quot;
+                                }
+                            },
+                            {
+                                &quot;url&quot;: &quot;text&quot;,
+                                &quot;valueString&quot;: &quot;White&quot;
+                            }
+                        ]
+                    },
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity&quot;,
+                        &quot;extension&quot;: [
+                            {
+                                &quot;url&quot;: &quot;ombCategory&quot;,
+                                &quot;valueCoding&quot;: {
+                                    &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.238&quot;,
+                                    &quot;code&quot;: &quot;2186-5&quot;,
+                                    &quot;display&quot;: &quot;Not Hispanic or Latino&quot;
+                                }
+                            },
+                            {
+                                &quot;url&quot;: &quot;text&quot;,
+                                &quot;valueString&quot;: &quot;Not Hispanic or Latino&quot;
+                            }
+                        ]
+                    },
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex&quot;,
+                        &quot;valueCode&quot;: &quot;M&quot;
+                    }
+                ],
+                &quot;identifier&quot;: [
+                    {
+                        &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.4.317&quot;,
+                        &quot;value&quot;: &quot;192|1CB5467C-49B6-4AD8-9767-9E236AE88B77&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;MR&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.4.317&quot;,
+                        &quot;value&quot;: &quot;79344198&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;SS&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/sid/us-ssn&quot;,
+                        &quot;value&quot;: &quot;824006327&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;MB&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;http://member.code.system&quot;,
+                        &quot;value&quot;: &quot;554958-52&quot;
+                    }
+                ],
+                &quot;active&quot;: true,
+                &quot;name&quot;: [
+                    {
+                        &quot;family&quot;: &quot;Thomas&quot;,
+                        &quot;given&quot;: [
+                            &quot;Thomas&quot;
+                        ]
+                    }
+                ],
+                &quot;telecom&quot;: [
+                    {
+                        &quot;system&quot;: &quot;phone&quot;,
+                        &quot;value&quot;: &quot;814-555-0122&quot;,
+                        &quot;use&quot;: &quot;mobile&quot;
+                    },
+                    {
+                        &quot;system&quot;: &quot;email&quot;,
+                        &quot;value&quot;: &quot;Thomas.Thomas@email.com&quot;
+                    }
+                ],
+                &quot;gender&quot;: &quot;male&quot;,
+                &quot;birthDate&quot;: &quot;1977-03-12&quot;,
+                &quot;address&quot;: [
+                    {
+                        &quot;type&quot;: &quot;physical&quot;,
+                        &quot;line&quot;: [
+                            &quot;126 ROBERT LANE&quot;
+                        ],
+                        &quot;city&quot;: &quot;New York&quot;,
+                        &quot;state&quot;: &quot;NY&quot;,
+                        &quot;postalCode&quot;: &quot;10301&quot;
+                    }
+                ],
+                &quot;communication&quot;: [
+                    {
+                        &quot;language&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;urn:ietf:bcp:47&quot;,
+                                    &quot;code&quot;: &quot;en&quot;,
+                                    &quot;display&quot;: &quot;English&quot;
+                                }
+                            ]
+                        }
+                    }
+                ],
+                &quot;generalPractitioner&quot;: [
+                    {
+                        &quot;reference&quot;: &quot;Practitioner/192|5B04B36E-CE80-48D6-9649-35A5E5C1A002&quot;,
+                        &quot;type&quot;: &quot;Practitioner&quot;
+                    }
+                ]
+            }
+        },
+        {
+            &quot;resource&quot;: {
+                &quot;resourceType&quot;: &quot;Patient&quot;,
+                &quot;id&quot;: &quot;cradmo6.243980&quot;,
+                &quot;meta&quot;: {
+                    &quot;lastUpdated&quot;: &quot;2021-06-25T08:04:11.000+00:00&quot;,
+                    &quot;profile&quot;: [
+                        &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient&quot;
+                    ]
+                },
+                &quot;extension&quot;: [
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-race&quot;,
+                        &quot;extension&quot;: [
+                            {
+                                &quot;url&quot;: &quot;ombCategory&quot;,
+                                &quot;valueCoding&quot;: {
+                                    &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.238&quot;,
+                                    &quot;code&quot;: &quot;2106-3&quot;,
+                                    &quot;display&quot;: &quot;White&quot;
+                                }
+                            },
+                            {
+                                &quot;url&quot;: &quot;text&quot;,
+                                &quot;valueString&quot;: &quot;White&quot;
+                            }
+                        ]
+                    },
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity&quot;,
+                        &quot;extension&quot;: [
+                            {
+                                &quot;url&quot;: &quot;ombCategory&quot;,
+                                &quot;valueCoding&quot;: {
+                                    &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.6.238&quot;,
+                                    &quot;code&quot;: &quot;2186-5&quot;,
+                                    &quot;display&quot;: &quot;Not Hispanic or Latino&quot;
+                                }
+                            },
+                            {
+                                &quot;url&quot;: &quot;text&quot;,
+                                &quot;valueString&quot;: &quot;Not Hispanic or Latino&quot;
+                            }
+                        ]
+                    },
+                    {
+                        &quot;url&quot;: &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex&quot;,
+                        &quot;valueCode&quot;: &quot;M&quot;
+                    }
+                ],
+                &quot;identifier&quot;: [
+                    {
+                        &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.4.317&quot;,
+                        &quot;value&quot;: &quot;144|4119B96C-F191-42E0-9F1F-1FA177C19236&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;MR&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;urn:oid:2.16.840.1.113883.4.317&quot;,
+                        &quot;value&quot;: &quot;74912714&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;SS&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;http://hl7.org/fhir/sid/us-ssn&quot;,
+                        &quot;value&quot;: &quot;109009181&quot;
+                    },
+                    {
+                        &quot;type&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,
+                                    &quot;code&quot;: &quot;MB&quot;
+                                }
+                            ]
+                        },
+                        &quot;system&quot;: &quot;http://member.code.system&quot;,
+                        &quot;value&quot;: &quot;537753-04&quot;
+                    }
+                ],
+                &quot;active&quot;: true,
+                &quot;name&quot;: [
+                    {
+                        &quot;family&quot;: &quot;Thomas&quot;,
+                        &quot;given&quot;: [
+                            &quot;Thomas&quot;
+                        ]
+                    }
+                ],
+                &quot;telecom&quot;: [
+                    {
+                        &quot;system&quot;: &quot;phone&quot;,
+                        &quot;value&quot;: &quot;739-555-0146&quot;,
+                        &quot;use&quot;: &quot;mobile&quot;
+                    },
+                    {
+                        &quot;system&quot;: &quot;email&quot;,
+                        &quot;value&quot;: &quot;Thomas.Thomas@email.com&quot;
+                    }
+                ],
+                &quot;gender&quot;: &quot;male&quot;,
+                &quot;birthDate&quot;: &quot;1970-12-30&quot;,
+                &quot;address&quot;: [
+                    {
+                        &quot;type&quot;: &quot;physical&quot;,
+                        &quot;line&quot;: [
+                            &quot;63-55 78 STREET&quot;
+                        ],
+                        &quot;city&quot;: &quot;New York&quot;,
+                        &quot;state&quot;: &quot;NY&quot;,
+                        &quot;postalCode&quot;: &quot;11379&quot;
+                    }
+                ],
+                &quot;communication&quot;: [
+                    {
+                        &quot;language&quot;: {
+                            &quot;coding&quot;: [
+                                {
+                                    &quot;system&quot;: &quot;urn:ietf:bcp:47&quot;,
+                                    &quot;code&quot;: &quot;en&quot;,
+                                    &quot;display&quot;: &quot;English&quot;
+                                }
+                            ]
+                        }
+                    }
+                ],
+                &quot;generalPractitioner&quot;: [
+                    {
+                        &quot;reference&quot;: &quot;Practitioner/144|BAC4C7C0-0F69-4C46-833A-6139AD032D33&quot;,
+                        &quot;type&quot;: &quot;Practitioner&quot;
+                    }
+                ]
+            }
+        }
+    ]
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Transfer-Encoding: chunked</div>
+        <div>X-Request-ID: n6HoVafjvAjtLMzy</div>
+        <div>Connection: keep-alive</div>
+        <div>Content-Encoding: gzip</div>
+        <div>Vary: Access-Control-Request-Headers</div>
+        <div>Last-Modified: Fri, 16 Sep 2022 05:55:07 GMT</div>
+        <div>Date: Fri, 16 Sep 2022 05:55:07 GMT</div>
+        <div>Content-Type: application/fhir+json;charset=UTF-8</div>
+        <div>X-Powered-By: HAPI FHIR 4.2.0 REST Server (FHIR Server; FHIR 4.0.1/R4)</div>
+</div>
+
+

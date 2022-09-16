@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="prac1.com.Condition"/>
+      <class name="prac1.com.ServiceRequest"/>
+      <class name="prac1.com.Patient"/>
+      <class name="prac1.com.MedicationRequest"/>
+      <class name="prac1.com.AllergyIntolerance"/>
+      <class name="prac1.com.Encounter"/>
+      <class name="prac1.com.Procedure"/>
+      <class name="prac1.com.Immunization"/>
+      <class name="prac1.com.Observation"/>
+      <class name="prac1.com.TestCases"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
