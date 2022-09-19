@@ -27,8 +27,9 @@ public class Token_Endpoint {
 					System.out.println("Token Is Good To Use");
 				 }
 			  }		 
-		   catch(Exception e) 
+		   catch(Exception e)		   
 		       {
+			   e.printStackTrace();
 				throw new RuntimeException("ABORT!!!! Failed To Get Token");
 			   }
             return access_token;
