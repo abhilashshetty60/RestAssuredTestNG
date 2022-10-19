@@ -6,12 +6,14 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import prac1.com.Route;
 
 public class Base_Api {
 	
 	public static RequestSpecification getrequestspec() {		
-	return new RequestSpecBuilder().				
-			      setBaseUri("https://test-fhirapi.development.arcadiaanalytics.com/fhir").
+	return new RequestSpecBuilder().
+			      //setBaseUri(System.getProperty("BASE_URI")).				
+			      setBaseUri(Route.BaseURI_FHIRAPI).
 			      addFilter(new AllureRestAssured()).			      
 			      setContentType(ContentType.JSON).
 			      build();						
@@ -24,8 +26,9 @@ public class Base_Api {
 	}
 	
 	public static RequestSpecification getrequestspecoftoken() {		
-	return new RequestSpecBuilder().				
-			      setBaseUri("https://authserver.development.arcadiaanalytics.com").
+	return new RequestSpecBuilder().
+			      //setBaseUri(System.getProperty("AUTH_BASE_URI")).				
+			      setBaseUri(Route.BaseURI_Auth).
 			      addFilter(new AllureRestAssured()).			      
 			      setContentType(ContentType.URLENC). 
 			      build();						

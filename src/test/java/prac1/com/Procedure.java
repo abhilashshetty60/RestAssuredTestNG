@@ -13,13 +13,13 @@ public class Procedure {
 	 
 @Test(priority=1)
 @Description("Validation of response and status code")
-@Severity(SeverityLevel.NORMAL)
+@Severity(SeverityLevel.CRITICAL)
 	public static void  Test_Case1() {
 		
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		
-	           response = Common_Method.get(QuerryParams, Route.Procedure);
+	           response = Common_Method.get(QuerryParams, Route.Procedure, 200);
 	                             
 	/*       	Assert.assertEquals(response.path("entry[0].resource.resourceType"), "AllergyIntolerance");
 	    	Assert.assertEquals(response.path("entry[0].resource.id"), "cradmo6.59662|58|0A87602C-061A-4335-AA51-15C6AAE60D6B");
@@ -40,7 +40,7 @@ public class Procedure {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("date", "ge2017-11-15");
 		
-	           response = Common_Method.get(QuerryParams, Route.Procedure);
+	           response = Common_Method.get(QuerryParams, Route.Procedure, 200);
 }
 
 @Test(priority=3)
@@ -53,7 +53,7 @@ public class Procedure {
 		QuerryParams.put("date", "ge2017-11-15");
 		QuerryParams.put("status", "completed");
 		
-	           response = Common_Method.get(QuerryParams, Route.Procedure);
+	           response = Common_Method.get(QuerryParams, Route.Procedure, 200);
 }
 
 @Test(priority=4)
@@ -66,7 +66,7 @@ public class Procedure {
 		QuerryParams.put("date", "ge2016-09-30");
 		QuerryParams.put("code", "300.00");
 		
-	           response = Common_Method.get(QuerryParams, Route.Procedure);
+	           response = Common_Method.get(QuerryParams, Route.Procedure, 200);
 }
 
 @Test(priority=5)
@@ -77,7 +77,7 @@ public class Procedure {
 	HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 	QuerryParams.put("null", "null");
 	
-	           response = Common_Method.get_for_null(QuerryParams, Route.Procedure);	        		   
+	           response = Common_Method.get(QuerryParams, Route.Procedure, 400);	        		   
 }
 
 @Test(priority=6)
@@ -88,7 +88,7 @@ public class Procedure {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59663");
 		
-	           response = Common_Method.get(QuerryParams, Route.Procedure);
+	           response = Common_Method.get(QuerryParams, Route.Procedure, 200);
 }
 
 @Test(priority=7)
@@ -99,7 +99,7 @@ public class Procedure {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		
-	           response = Common_Method.get_for_invalid(QuerryParams, Route.invalidpath);
+	           response = Common_Method.get(QuerryParams, Route.invalidpath, 404);
 }
 
 @Test(priority=8)
@@ -111,7 +111,7 @@ public class Procedure {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("date", "ge2015-03-06");
 		
-	           response = Common_Method.get(QuerryParams, Route.Procedure);
+	           response = Common_Method.get(QuerryParams, Route.Procedure, 200);
 }
 
 @Test(priority=9)
@@ -123,7 +123,7 @@ public class Procedure {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("status", "stopped");
 		
-	           response = Common_Method.get(QuerryParams, Route.Procedure);
+	           response = Common_Method.get(QuerryParams, Route.Procedure, 200);
 }
 
 @Test(priority=10)
@@ -136,6 +136,6 @@ public class Procedure {
 		QuerryParams.put("date", "ge2015-03-06");
 		QuerryParams.put("code", "99203");
 		
-	           response = Common_Method.get(QuerryParams, Route.Procedure);
+	           response = Common_Method.get(QuerryParams, Route.Procedure, 200);
 }
 }

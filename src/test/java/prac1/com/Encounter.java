@@ -13,13 +13,13 @@ public class Encounter {
 	 
 @Test(priority=1)
 @Description("Validation of response and status code")
-@Severity(SeverityLevel.NORMAL)
+@Severity(SeverityLevel.CRITICAL)
 	public static void  Test_Case1() {
 		
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		
-	           response = Common_Method.get(QuerryParams, Route.Encounter);
+	           response = Common_Method.get(QuerryParams, Route.Encounter, 200);
 	                             
 	/*       	Assert.assertEquals(response.path("entry[0].resource.resourceType"), "AllergyIntolerance");
 	    	Assert.assertEquals(response.path("entry[0].resource.id"), "cradmo6.59662|58|0A87602C-061A-4335-AA51-15C6AAE60D6B");
@@ -40,7 +40,7 @@ public class Encounter {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("date", "ge2018-03-14");
 		
-	           response = Common_Method.get(QuerryParams, Route.Encounter);
+	           response = Common_Method.get(QuerryParams, Route.Encounter, 200);
 }
 
 @Test(priority=3)
@@ -52,7 +52,7 @@ public class Encounter {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("class", "http://terminology.hl7.org/CodeSystem/v3-ActCode%7CAMB");
 		
-	           response = Common_Method.get(QuerryParams, Route.Encounter);
+	           response = Common_Method.get(QuerryParams, Route.Encounter, 200);
 }
 
 @Test(priority=4)
@@ -64,7 +64,7 @@ public class Encounter {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("status", "finished");
 		
-	           response = Common_Method.get(QuerryParams, Route.Encounter);
+	           response = Common_Method.get(QuerryParams, Route.Encounter, 200);
 }
 
 @Test(priority=5)
@@ -75,7 +75,7 @@ public class Encounter {
 	HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 	QuerryParams.put("null", "null");
 	
-	           response = Common_Method.get_for_null(QuerryParams, Route.Encounter);	        		   
+	           response = Common_Method.get(QuerryParams, Route.Encounter, 400);	        		   
 }
 
 @Test(priority=6)
@@ -86,7 +86,7 @@ public class Encounter {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59663");
 		
-	           response = Common_Method.get(QuerryParams, Route.Encounter);
+	           response = Common_Method.get(QuerryParams, Route.Encounter, 200);
 }
 
 @Test(priority=7)
@@ -97,7 +97,7 @@ public class Encounter {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		
-	           response = Common_Method.get_for_invalid(QuerryParams, Route.invalidpath);
+	           response = Common_Method.get(QuerryParams, Route.invalidpath, 404);
 }
 
 @Test(priority=8)
@@ -109,7 +109,7 @@ public class Encounter {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("date", "ge2015-03-06");
 		
-	           response = Common_Method.get(QuerryParams, Route.Encounter);
+	           response = Common_Method.get(QuerryParams, Route.Encounter, 200);
 }
 
 @Test(priority=9)
@@ -121,7 +121,7 @@ public class Encounter {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("status", "planned");
 		
-	           response = Common_Method.get(QuerryParams, Route.Encounter);
+	           response = Common_Method.get(QuerryParams, Route.Encounter, 200);
 }
 
 @Test(priority=10)
@@ -133,6 +133,6 @@ public class Encounter {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("class", "http://terminology.hl7.org/CodeSystem/v3-ActCode%7CEMER");
 		
-	           response = Common_Method.get(QuerryParams, Route.Encounter);
+	           response = Common_Method.get(QuerryParams, Route.Encounter, 200);
 }
 }

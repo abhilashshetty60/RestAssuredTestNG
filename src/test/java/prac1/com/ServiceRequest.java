@@ -13,13 +13,13 @@ public class ServiceRequest {
 	 
 @Test(priority=1)
 @Description("Validation of response and status code")
-@Severity(SeverityLevel.NORMAL)
+@Severity(SeverityLevel.CRITICAL)
 	public static void  Test_Case1() {
 		
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		
-	           response = Common_Method.get(QuerryParams, Route.ServiceRequest);
+	           response = Common_Method.get(QuerryParams, Route.ServiceRequest, 200);
 	                             
 	/*      Assert.assertEquals(response.path("entry[0].resource.resourceType"), "AllergyIntolerance");
 	    	Assert.assertEquals(response.path("entry[0].resource.id"), "cradmo6.59662|58|0A87602C-061A-4335-AA51-15C6AAE60D6B");
@@ -40,7 +40,7 @@ public class ServiceRequest {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("code", "3097-3");		
 		
-	           response = Common_Method.get(QuerryParams, Route.ServiceRequest);
+	           response = Common_Method.get(QuerryParams, Route.ServiceRequest, 200);
 }
 
 @Test(priority=3)
@@ -52,7 +52,7 @@ public class ServiceRequest {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("category", "108252007");
 		
-	           response = Common_Method.get(QuerryParams, Route.ServiceRequest);
+	           response = Common_Method.get(QuerryParams, Route.ServiceRequest, 200);
 }
 
 @Test(priority=4)
@@ -65,7 +65,7 @@ public class ServiceRequest {
 		QuerryParams.put("category", "108252007");
 		QuerryParams.put("authored", "ge2022-11-22");
 		
-	           response = Common_Method.get(QuerryParams, Route.ServiceRequest);
+	           response = Common_Method.get(QuerryParams, Route.ServiceRequest, 200);
 }
 
 @Test(priority=5)
@@ -76,7 +76,7 @@ public class ServiceRequest {
 	HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 	QuerryParams.put("null", "null");
 	
-	           response = Common_Method.get_for_null(QuerryParams, Route.ServiceRequest);	        		   
+	           response = Common_Method.get(QuerryParams, Route.ServiceRequest, 400);	        		   
 }
 
 @Test(priority=7)
@@ -87,7 +87,7 @@ public class ServiceRequest {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59663");
 		
-	           response = Common_Method.get(QuerryParams, Route.ServiceRequest);
+	           response = Common_Method.get(QuerryParams, Route.ServiceRequest, 200);
 }
 
 @Test(priority=8)
@@ -98,7 +98,7 @@ public class ServiceRequest {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		
-	           response = Common_Method.get_for_invalid(QuerryParams, Route.invalidpath);
+	           response = Common_Method.get(QuerryParams, Route.invalidpath, 404);
  }	
 
 @Test(priority=9)
@@ -110,7 +110,7 @@ public class ServiceRequest {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("code", "E1122");		
 		
-	           response = Common_Method.get(QuerryParams, Route.ServiceRequest);
+	           response = Common_Method.get(QuerryParams, Route.ServiceRequest, 200);
  }
 
 @Test(priority=10)
@@ -122,7 +122,7 @@ public class ServiceRequest {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("category", "386053000");
 		
-	           response = Common_Method.get(QuerryParams, Route.ServiceRequest);
+	           response = Common_Method.get(QuerryParams, Route.ServiceRequest, 200);
 }
 
 @Test(priority=11)
@@ -135,7 +135,7 @@ public class ServiceRequest {
 		QuerryParams.put("category", "108252007");
 		QuerryParams.put("authored", "ge2000-11-22");
 		
-	           response = Common_Method.get(QuerryParams, Route.ServiceRequest);
+	           response = Common_Method.get(QuerryParams, Route.ServiceRequest, 200);
 }
 
 @Test(priority=12)
@@ -148,6 +148,6 @@ public class ServiceRequest {
 		QuerryParams.put("category", "108252007");
 		QuerryParams.put("authored", "ge22-11-2000");
 		
-	           response = Common_Method.get_for_null(QuerryParams, Route.ServiceRequest);
+	           response = Common_Method.get(QuerryParams, Route.ServiceRequest, 400);
  }
 }

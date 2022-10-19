@@ -3,17 +3,6 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="prac1.com.Observation">
-        <methods>
-          <include name="Test_Case8"/>
-        </methods>
-      </class> <!-- prac1.com.Observation -->
-      <class name="prac1.com.MedicationRequest">
-        <methods>
-          <include name="Test_Case9"/>
-          <include name="Test_Case3"/>
-        </methods>
-      </class> <!-- prac1.com.MedicationRequest -->
       <class name="prac1.com.Patient">
         <methods>
           <include name="Test_Case13"/>

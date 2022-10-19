@@ -10,21 +10,21 @@ import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
 public class AllergyIntolerance {
- 
+
 	public static Response response;
 @Step 
 @Test(priority=1)
 @Description("Validation of response and status code")
-@Severity(SeverityLevel.NORMAL)
+@Severity(SeverityLevel.CRITICAL)
 	public static void  Test_Case1() {
 		
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		
-	           response = Common_Method.get(QuerryParams, Route.AllergyIntolerance);
-	                             
+	           response = Common_Method.get(QuerryParams, Route.AllergyIntolerance, 200);
+
 	       	Assert.assertEquals(response.path("entry[0].resource.resourceType"), "AllergyIntolerance");
-	    	Assert.assertEquals(response.path("entry[0].resource.id"), "cradmo6.59662|58|0A87602C-061A-4335-AA51-15C6AAE60D6B");
+	    	Assert.assertEquals(response.path("entry[0].resource.id"), "cradmo6.59662-.-58-.-0A87602C-061A-4335-AA51-15C6AAE60D6B");
 	    	Assert.assertEquals(response.path("entry[0].resource.meta.lastUpdated"), "2021-06-25T08:04:11.000+00:00");
 	    	Assert.assertEquals(response.path("entry[0].resource.category[0]"), "medication");
 	    	Assert.assertEquals(response.path("entry[0].resource.code.text"), "levofloxacin");
@@ -32,6 +32,7 @@ public class AllergyIntolerance {
 	    	Assert.assertEquals(response.path("entry[0].resource.onsetDateTime"), "2021-01-01T00:00:00+00:00");
 	    	Assert.assertEquals(response.path("entry[0].resource.clinicalStatus.coding[0].code"), "active");       
 }
+
 @Step
 @Test(priority=2)
 @Description("Validation of status code with clinical-status as a filtering parameter")
@@ -42,8 +43,9 @@ public class AllergyIntolerance {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("clinical-status", "http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fallergyintolerance-clinical%7Cactive");
 		
-	           response = Common_Method.get(QuerryParams, Route.AllergyIntolerance);	      
+	           response = Common_Method.get(QuerryParams, Route.AllergyIntolerance, 200);	      
 }
+
 @Step
 @Test(priority=3)
 @Description("Validation of status code without valid Parameters")
@@ -53,9 +55,10 @@ public class AllergyIntolerance {
 	HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 	QuerryParams.put("null", "null");
 	
-	           response = Common_Method.get_for_null(QuerryParams, Route.AllergyIntolerance);
+	           response = Common_Method.get(QuerryParams, Route.AllergyIntolerance, 400);
 	        		   
 }
+
 @Step
 @Test(priority=4)
 @Description("Validation of status code with invalid parameters")
@@ -65,8 +68,9 @@ public class AllergyIntolerance {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59663");
 		
-	           response = Common_Method.get(QuerryParams, Route.AllergyIntolerance);
+	           response = Common_Method.get(QuerryParams, Route.AllergyIntolerance, 200);
 }
+
 @Step
 @Test(priority=5)
 @Description("Validation of status code with invalid headers/path")
@@ -76,8 +80,9 @@ public class AllergyIntolerance {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		
-	           response = Common_Method.get_for_invalid(QuerryParams, Route.invalidpath);
+	           response = Common_Method.get(QuerryParams, Route.invalidpath, 404);
 }
+
 @Step
 @Test(priority=6)
 @Description("Validation of status code with different clinical-status code")
@@ -88,6 +93,7 @@ public class AllergyIntolerance {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("clinical-status", "http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fallergyintolerance-clinical%7Cresolved");
 		
-	           response = Common_Method.get(QuerryParams, Route.AllergyIntolerance);
+	           response = Common_Method.get(QuerryParams, Route.AllergyIntolerance, 200);
+	           
  }
 }
