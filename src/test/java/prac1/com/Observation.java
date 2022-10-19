@@ -13,14 +13,14 @@ public class Observation {
 	 
 @Test(priority=1)
 @Description("Validation of status code and category as a filtering parameter")
-@Severity(SeverityLevel.NORMAL)
+@Severity(SeverityLevel.CRITICAL)
 	public static void  Test_Case1() {
 		
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("category", "laboratory");
 		
-	           response = Common_Method.get(QuerryParams, Route.Observation);
+	           response = Common_Method.get(QuerryParams, Route.Observation, 200);
 	                             
      /*     Assert.assertEquals(response.path("entry[0].resource.resourceType"), "AllergyIntolerance");
 	    	Assert.assertEquals(response.path("entry[0].resource.id"), "cradmo6.59662|58|0A87602C-061A-4335-AA51-15C6AAE60D6B");
@@ -34,14 +34,14 @@ public class Observation {
 
 @Test(priority=2)
 @Description("Validation of status code and category as a filtering parameter")
-@Severity(SeverityLevel.NORMAL)
+@Severity(SeverityLevel.CRITICAL)
 	public static void  Test_Case2() {
 		
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("category", "vital-signs");		
 		
-	           response = Common_Method.get(QuerryParams, Route.Observation);
+	           response = Common_Method.get(QuerryParams, Route.Observation, 200);
 }
 
 @Test(priority=3)
@@ -53,7 +53,7 @@ public class Observation {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("code", "8302-2");
 		
-	           response = Common_Method.get(QuerryParams, Route.Observation);
+	           response = Common_Method.get(QuerryParams, Route.Observation, 200);
 }
 
 @Test(priority=4)
@@ -66,7 +66,7 @@ public class Observation {
 		QuerryParams.put("category", "vital-signs");
 		QuerryParams.put("date", "ge2022-07-14");
 		
-	           response = Common_Method.get(QuerryParams, Route.Observation);
+	           response = Common_Method.get(QuerryParams, Route.Observation, 200);
 }
 
 @Test(priority=5)
@@ -79,7 +79,7 @@ public class Observation {
 		QuerryParams.put("category", "vital-signs");
 		QuerryParams.put("status", "final");
 		
-	           response = Common_Method.get(QuerryParams, Route.Observation);
+	           response = Common_Method.get(QuerryParams, Route.Observation, 200);
 }
 
 @Test(priority=6)
@@ -92,7 +92,7 @@ public class Observation {
 		QuerryParams.put("code", "http://loinc.org%78462-4");
 		QuerryParams.put("date", "ge2016-09-30");
 		
-	           response = Common_Method.get(QuerryParams, Route.Observation);
+	           response = Common_Method.get(QuerryParams, Route.Observation, 200);
 }
 
 @Test(priority=7)
@@ -103,7 +103,7 @@ public class Observation {
 	HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 	QuerryParams.put("null", "null");
 	
-	           response = Common_Method.get_for_null(QuerryParams, Route.Observation);	        		   
+	           response = Common_Method.get(QuerryParams, Route.Observation, 400);	        		   
 }
 
 @Test(priority=8)
@@ -114,7 +114,7 @@ public class Observation {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59663");
 		
-	           response = Common_Method.get(QuerryParams, Route.Observation);
+	           response = Common_Method.get(QuerryParams, Route.Observation, 200);
 }
 
 @Test(priority=9)
@@ -125,7 +125,7 @@ public class Observation {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		
-	           response = Common_Method.get_for_invalid(QuerryParams, Route.invalidpath);
+	           response = Common_Method.get(QuerryParams, Route.invalidpath, 404);
  }
 
 @Test(priority=10)
@@ -137,7 +137,7 @@ public class Observation {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("code", "706-2");
 		
-	           response = Common_Method.get(QuerryParams, Route.Observation);
+	           response = Common_Method.get(QuerryParams, Route.Observation, 200);
 }
 
 @Test(priority=11)
@@ -150,7 +150,7 @@ public class Observation {
 		QuerryParams.put("category", "vital-signs");
 		QuerryParams.put("date", "ge2000-07-14");
 		
-	           response = Common_Method.get(QuerryParams, Route.Observation);
+	           response = Common_Method.get(QuerryParams, Route.Observation, 200);
 }
 
 @Test(priority=12)
@@ -163,7 +163,7 @@ public class Observation {
 		QuerryParams.put("category", "vital-signs");
 		QuerryParams.put("date", "ge14-07-2000");
 		
-	           response = Common_Method.get_for_null(QuerryParams, Route.Observation);
+	           response = Common_Method.get(QuerryParams, Route.Observation, 400);
 }
 
 @Test(priority=13)
@@ -176,6 +176,6 @@ public class Observation {
 		QuerryParams.put("category", "vital-signs");
 		QuerryParams.put("status", "registered");
 		
-	           response = Common_Method.get(QuerryParams, Route.Observation);
+	           response = Common_Method.get(QuerryParams, Route.Observation, 200);
  }
 }

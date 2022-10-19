@@ -18,4 +18,6 @@ public class Route {
 	public static final String Condition="/Condition";
 	public static final String Observation="/Observation";
 	public static final String ServiceRequest="/ServiceRequest";
+	public static final String BaseURI_FHIRAPI="https://test-fhirapi.development.arcadiaanalytics.com/fhir";
+	public static final String BaseURI_Auth="https://authserver.development.arcadiaanalytics.com";
 }

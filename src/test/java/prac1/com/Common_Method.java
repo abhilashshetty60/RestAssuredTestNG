@@ -2,13 +2,12 @@ package prac1.com;
 
 import static io.restassured.RestAssured.given;
 import java.util.Map;
-import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import prac2.Base_Api;
 
 public class Common_Method {
-@Step
-	public static Response get(Map<String, String> payload, String Basepath) {        
+
+	public static Response get(Map<String, String> payload, String Basepath, int statuscode) {        
 		return 
 			given().
 		        spec(Base_Api.getrequestspec()).	        
@@ -20,11 +19,13 @@ public class Common_Method {
                 spec(Base_Api.getresponsespec()).
                 log().ifError().
                 assertThat().
-                statusCode(200).	   		      
+                statusCode(statuscode).	   		      
                 extract().
-                response();
+                response();     
 	}
-@Step	  // For invalid parameters
+	
+/*	
+	  // For invalid parameters
 	public static Response get_for_invalid(Map<String, String> payload, String Basepath) {        
 		return 
 			given().
@@ -41,7 +42,7 @@ public class Common_Method {
                 extract().
                 response();
 	}
-@Step	  //For no parameters
+	  //For no parameters
 	public static Response get_for_null(Map<String, String> payload, String Basepath) {        
 		return 
 			given().
@@ -58,11 +59,11 @@ public class Common_Method {
                 extract().
                 response();
 	}
-@Step
+
 	public static Response get_for_musthave(Map<String, String> payload, String Basepath) {        
 		return 
 			given().
-		        spec(Base_Api.getrequestspec()).	        
+		        spec(Base_Api.getrequestspec()).        
                 queryParams(payload).
                 auth().oauth2(Token_Endpoint.Token()).		        		       
             when().
@@ -75,4 +76,5 @@ public class Common_Method {
                 extract().
                 response();
 	}
+	*/
 }

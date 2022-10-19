@@ -13,13 +13,13 @@ public class Patient {
 	 
 @Test(priority=1)
 @Description("Validation of response and status code")
-@Severity(SeverityLevel.NORMAL)
+@Severity(SeverityLevel.CRITICAL)
 	public static void  Test_Case1() {
 		
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("_id", "cradmo6.59662");
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 	                             
 	/*       	Assert.assertEquals(response.path("entry[0].resource.resourceType"), "AllergyIntolerance");
 	    	Assert.assertEquals(response.path("entry[0].resource.id"), "cradmo6.59662|58|0A87602C-061A-4335-AA51-15C6AAE60D6B");
@@ -33,24 +33,24 @@ public class Patient {
 
 @Test(priority=2)
 @Description("Validation of status code and identifier as a filtering parameter")
-@Severity(SeverityLevel.NORMAL)
+@Severity(SeverityLevel.CRITICAL)
 	public static void  Test_Case2() {
 		
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("identifier:", "http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fv2-0203%7CMR%7C61277941");		
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 }
 
 @Test(priority=3)
 @Description("Validation of status code and name as a filtering parameter")
-@Severity(SeverityLevel.NORMAL)
+@Severity(SeverityLevel.CRITICAL)
 	public static void  Test_Case3() {
 		
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("name", "Peggy,Thomas");
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 }
 
 @Test(priority=4)
@@ -62,7 +62,7 @@ public class Patient {
 		QuerryParams.put("birthdate", "1952-04-08");
 		QuerryParams.put("name", "Peggy,Thomas");
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 }
 
 @Test(priority=5)
@@ -74,7 +74,7 @@ public class Patient {
 		QuerryParams.put("birthdate", "1952-04-08");
 		QuerryParams.put("family", "Thomas");
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 }
 
 @Test(priority=6)
@@ -85,7 +85,7 @@ public class Patient {
 	HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 	QuerryParams.put("null", "null");
 	
-	           response = Common_Method.get_for_null(QuerryParams, Route.Patient);	        		   
+	           response = Common_Method.get(QuerryParams, Route.Patient, 400);	        		   
 }
 
 @Test(priority=7)
@@ -96,7 +96,7 @@ public class Patient {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("_id", "cradmo6.59663");
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 }
 
 @Test(priority=8)
@@ -107,7 +107,7 @@ public class Patient {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("identifier:", "http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fv2-0203%7CMR%7C61277942");
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 }
 
 @Test(priority=9)
@@ -118,7 +118,7 @@ public class Patient {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("name:", "Pegy,Thmas");
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 }
 
 @Test(priority=10)
@@ -130,7 +130,7 @@ public class Patient {
 		QuerryParams.put("name:", "Peggy,Thomas");
 		QuerryParams.put("birthdate:", "08-04-1952");
 		
-	           response = Common_Method.get_for_null(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 400);
 }
 
 @Test(priority=11)
@@ -142,7 +142,7 @@ public class Patient {
 		QuerryParams.put("family:", "Thmas");
 		QuerryParams.put("birthdate:", "1952-04-08");
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 }
 
 @Test(priority=12)
@@ -154,7 +154,7 @@ public class Patient {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("intent", "order");
 		
-	           response = Common_Method.get_for_invalid(QuerryParams, Route.invalidpath);
+	           response = Common_Method.get(QuerryParams, Route.invalidpath, 404);
  }
 
 @Test(priority=13)
@@ -165,7 +165,7 @@ public class Patient {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("identifier:", "http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fv2-0203%7CSS%7C61277941");		
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 }
 
 @Test(priority=14)
@@ -176,7 +176,7 @@ public class Patient {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("name:", "Ericson");		
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 }
 
 @Test(priority=15)
@@ -188,7 +188,7 @@ public class Patient {
 		QuerryParams.put("name:", "Ericson");
 		QuerryParams.put("birthdate:", "1997-04-08");
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
 }
 
 @Test(priority=16)
@@ -200,6 +200,17 @@ public class Patient {
 		QuerryParams.put("family:", "Ericson");
 		QuerryParams.put("birthdate:", "1997-04-08");
 		
-	           response = Common_Method.get(QuerryParams, Route.Patient);
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
+ }
+
+@Test(priority=17)
+@Description("Validation of status code with multiple names as a filtering parameter")
+@Severity(SeverityLevel.NORMAL)
+	public static void  Test_Case17() {
+		
+		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
+		QuerryParams.put("name:", "Peggy;Thomas");                               // for multiple values ---->>>> "Peggy;Thomas"   or     "Peggy,Thomas"
+		
+	           response = Common_Method.get(QuerryParams, Route.Patient, 200);
  }
 }

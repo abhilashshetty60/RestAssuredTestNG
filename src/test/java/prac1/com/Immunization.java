@@ -14,17 +14,17 @@ public static Response response;
 	
 @Test(priority=1)
 @Description("Validation of response and status code")
-@Severity(SeverityLevel.BLOCKER)
+@Severity(SeverityLevel.CRITICAL)
 
 public static void  Test_Case1() {
 	
 	HashMap<String, String> QueryParams = new HashMap<String, String> ();
 	QueryParams.put("patient", "cradmo6.59662");
 	
-           response = Common_Method.get(QueryParams, Route.Immunization);
+           response = Common_Method.get(QueryParams, Route.Immunization, 200);
            
 	       	Assert.assertEquals(response.path("entry[0].resource.resourceType"), "Immunization");
-	    	Assert.assertEquals(response.path("entry[0].resource.id"), "cradmo6.59662|127|285502");
+	    	Assert.assertEquals(response.path("entry[0].resource.id"), "cradmo6.59662-.-127-.-285502");
 	    	Assert.assertEquals(response.path("entry[0].resource.meta.lastUpdated"), "2021-06-25T08:04:11.000+00:00");
 	    	Assert.assertEquals(response.path("entry[0].resource.status"), "completed");
 	    	Assert.assertEquals(response.path("entry[0].resource.vaccineCode.coding[0].code"), "140");
@@ -42,7 +42,7 @@ public static void  Test_Case1() {
 	HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 	QuerryParams.put("null", "null");
 	
-	           response = Common_Method.get_for_null(QuerryParams, Route.Immunization);
+	           response = Common_Method.get(QuerryParams, Route.Immunization, 400);
  }
 
 @Test(priority=3)
@@ -53,7 +53,7 @@ public static void Test_Case3() {
 	HashMap<String, String> QueryParams = new HashMap<String, String> ();
 	QueryParams.put("patient", "cradmo6.59663");
 	
-           response = Common_Method.get(QueryParams, Route.Immunization);
+           response = Common_Method.get(QueryParams, Route.Immunization, 200);
            //Assert.assertEquals(response.path("entry[]"), null);
 }
 
@@ -65,7 +65,7 @@ public static void Test_Case4() {
 	HashMap<String, String> QueryParams = new HashMap<String, String> ();
 	QueryParams.put("patient", "cradmo6.59662");
 	
-           response = Common_Method.get_for_invalid(QueryParams, Route.Immunization);	
+           response = Common_Method.get(QueryParams, Route.invalidpath, 404);	
 }
 
 @Test(priority=5)
@@ -77,7 +77,7 @@ public static void Test_Case5() {
 	QueryParams.put("patient", "cradmo6.59662");
 	QueryParams.put("date", "ge2017-11-20");
 	
-          response = Common_Method.get(QueryParams, Route.Immunization);
+          response = Common_Method.get(QueryParams, Route.Immunization, 200);
 } 
 
 @Test(priority=6)
@@ -89,7 +89,7 @@ public static void Test_Case6() {
 	QueryParams.put("patient", "cradmo6.59662");
 	QueryParams.put("status", "completed");
 	
-        response =  Common_Method.get(QueryParams, Route.Immunization);                                         
+        response =  Common_Method.get(QueryParams, Route.Immunization, 200);                                         
  }
 
 @Test(priority=7)
@@ -101,6 +101,6 @@ public static void Test_Case7() {
 	QueryParams.put("patient", "cradmo6.59662");
 	QueryParams.put("status", "not-done");
 	
-        response = Common_Method.get(QueryParams, Route.Immunization);                                        
+        response = Common_Method.get(QueryParams, Route.Immunization, 200);                                        
  }
 }

@@ -13,14 +13,14 @@ public class MedicationRequest {
 	 
 @Test(priority=1)
 @Description("Validation of response and status code")
-@Severity(SeverityLevel.NORMAL)
+@Severity(SeverityLevel.CRITICAL)
 	public static void  Test_Case1() {
 		
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("intent", "order");
 		
-	           response = Common_Method.get(QuerryParams, Route.MedicationRequest);
+	           response = Common_Method.get(QuerryParams, Route.MedicationRequest, 200);
 	                             
 	/*       	Assert.assertEquals(response.path("entry[0].resource.resourceType"), "AllergyIntolerance");
 	    	Assert.assertEquals(response.path("entry[0].resource.id"), "cradmo6.59662|58|0A87602C-061A-4335-AA51-15C6AAE60D6B");
@@ -42,7 +42,7 @@ public class MedicationRequest {
 		QuerryParams.put("intent", "order");
 		QuerryParams.put("status", "completed");		
 		
-	           response = Common_Method.get(QuerryParams, Route.MedicationRequest);
+	           response = Common_Method.get(QuerryParams, Route.MedicationRequest, 200);
 }
 
 @Test(priority=3)
@@ -53,9 +53,9 @@ public class MedicationRequest {
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("intent", "order");
-		QuerryParams.put("encounter", "Encounter/416%7C62728%7C6E321B3A-6E45-446C-A866-42A303BF6335");
+		QuerryParams.put("encounter", "Encounter/416%2D%2E%2D62728%2D%2E%2D6E321B3A-6E45-446C-A866-42A303BF6335");
 		
-	           response = Common_Method.get(QuerryParams, Route.MedicationRequest);
+	           response = Common_Method.get(QuerryParams, Route.MedicationRequest, 200);
 }
 
 @Test(priority=4)
@@ -68,7 +68,7 @@ public class MedicationRequest {
 		QuerryParams.put("intent", "order");
 		QuerryParams.put("authoredon", "ge2018-03-14");
 		
-	           response = Common_Method.get(QuerryParams, Route.MedicationRequest);
+	           response = Common_Method.get(QuerryParams, Route.MedicationRequest, 200);
 }
 
 @Test(priority=5)
@@ -79,7 +79,7 @@ public class MedicationRequest {
 	HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 	QuerryParams.put("null", "null");
 	
-	           response = Common_Method.get_for_null(QuerryParams, Route.MedicationRequest);	        		   
+	           response = Common_Method.get(QuerryParams, Route.MedicationRequest, 400);	        		   
 }
 
 @Test(priority=6)
@@ -91,7 +91,7 @@ public class MedicationRequest {
 		QuerryParams.put("patient", "cradmo6.59663");
 		QuerryParams.put("intent", "order");
 		
-	           response = Common_Method.get(QuerryParams, Route.MedicationRequest);
+	           response = Common_Method.get(QuerryParams, Route.MedicationRequest, 200);
 }
 
 @Test(priority=7)
@@ -103,7 +103,7 @@ public class MedicationRequest {
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("intent", "order");
 		
-	           response = Common_Method.get_for_invalid(QuerryParams, Route.invalidpath);
+	           response = Common_Method.get(QuerryParams, Route.invalidpath, 404);
 }
 
 @Test(priority=8)
@@ -116,20 +116,20 @@ public class MedicationRequest {
 		QuerryParams.put("intent", "order");
 		QuerryParams.put("status", "stopped");
 		
-	           response = Common_Method.get(QuerryParams, Route.MedicationRequest);
+	           response = Common_Method.get(QuerryParams, Route.MedicationRequest, 200);
 }
 
 @Test(priority=9)
 @Description("Validation of status code with different encounter")
 @Severity(SeverityLevel.NORMAL)
 	public static void  Test_Case9() {
-		
+
 		HashMap<String, String> QuerryParams = new HashMap<String, String> ();
 		QuerryParams.put("patient", "cradmo6.59662");
 		QuerryParams.put("intent", "order");
-		QuerryParams.put("encounter", "Encounter/416%7C62728%7CF1BB9F63-C26A-49DA-8669-DE1B722FE842");
+		QuerryParams.put("encounter", "Encounter/416%2D%2E%2D62728%2D%2E%2DF1BB9F63-C26A-49DA-8669-DE1B722FE842");
 		
-	           response = Common_Method.get(QuerryParams, Route.MedicationRequest);
+	           response = Common_Method.get(QuerryParams, Route.MedicationRequest, 200);
 }
 
 @Test(priority=10)
@@ -142,7 +142,7 @@ public class MedicationRequest {
 		QuerryParams.put("intent", "order");
 		QuerryParams.put("authoredon", "ge2000-03-14");
 		
-	           response = Common_Method.get(QuerryParams, Route.MedicationRequest);
+	           response = Common_Method.get(QuerryParams, Route.MedicationRequest, 200);
  }
 
 @Test(priority=11)
@@ -155,6 +155,6 @@ public class MedicationRequest {
 		QuerryParams.put("intent", "plan");
 		QuerryParams.put("authoredon", "ge2000-03-14");
 		
-	           response = Common_Method.get_for_musthave(QuerryParams, Route.MedicationRequest);
+	           response = Common_Method.get(QuerryParams, Route.MedicationRequest, 500);
  }
 }

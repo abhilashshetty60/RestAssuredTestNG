@@ -9,7 +9,7 @@ public class ConfigLoader {
 	
 	private ConfigLoader() {
 		
-		properties = PropertyUtils.propertyLoader("src/test/resources/Config.Properties");
+		properties = PropertyUtils.propertyLoader("src/test/resources/Config.Properties");           //>>>>
 	}
 	
 	public static ConfigLoader getInstance() {
