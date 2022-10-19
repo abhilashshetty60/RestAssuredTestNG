@@ -1,9 +1,7 @@
-package prac1.com;
+package Utils;
 
 import java.lang.reflect.Method;
-
 import org.testng.annotations.BeforeMethod;
-
 
 public class BaseTest {
  
